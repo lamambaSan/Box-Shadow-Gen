@@ -1,0 +1,223 @@
+
+
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--text);
+    transition: 0.5s;
+    /* border: 1px solid black; */
+}
+#navigator{
+    display: none;
+}
+#infoToolkit{
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-top: 10px;
+    transform: translateY(-300%);
+    transition: 1s;
+
+
+}
+#infoToolkit h4{
+    text-align: center;
+    background: var(--text);
+    color: var(--bg);
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    border-radius: 20px;
+}
+html{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.fillHeight{
+    height: 100vh;
+}
+.flexIt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#interface{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color:var(--bg) ;
+}
+#inputs{
+    display: grid;
+    grid-template-rows: 1fr 4fr 2fr;
+}
+#inputLines{
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+}
+#inputLines #inputCont{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    text-align: center;
+}
+.input{
+    border-radius: 20px;
+    background-color: var(--bg-var);
+    border: 1px solid var(--bg-nuance);
+
+}
+.input input{
+    background-color: var(--bg);
+    border-radius: 10px;
+    border: 1px solid var(--accent);
+}
+#inputLines #inputCont *{
+    
+    padding: 10px;
+    margin: 5px;
+}
+#inputLines #shapePrompt{
+    margin: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: var(--bg-var);
+    border: 1px solid var(--bg-nuance);
+
+    display: grid;
+    grid-template-rows: 0.5fr 1fr;
+}
+#inputLines #shapePrompt div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#result{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr 1fr;
+    padding: 20px;
+}
+#result textarea{
+    border: 1px solid var(--bg-nuance);
+
+    resize: none;
+    border-radius: 20px;
+    background-color: var(--bg-var);
+    padding-top: 6vh;
+    text-align: center;
+    vertical-align: center;
+    font-weight: 600;
+}
+#result button{
+    width: 50%;
+    padding:10px;
+    margin: auto;
+    background-color: var(--accent);
+    border: none;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+#screen{
+    display: grid;
+    grid-template-rows: 2fr 8fr 1fr;
+}
+#color{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    grid-gap: 20px;
+    text-align: center;
+}
+#color div{
+    border-radius: 20px;
+    padding: 10px;
+    background-color: var(--bg-var);
+    border: 1px solid var(--bg-nuance);
+}
+
+#testingArea{
+    padding: 10px;
+    
+}
+#testingBox{
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+#resultBox{
+    transition: 0.5s linear;
+    height: 200px;
+    width: 200px;
+    background-color: black;
+}
+#themeCont{
+    width: 20px;
+    position: fixed;
+    margin: 20px;
+    height: 20px;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 100% 100%;
+    overflow: hidden;
+    z-index: 20;
+}
+#themeCont svg{
+    fill: var(--text);
+    transition: 1s;
+}
+#themeCont:hover svg{
+    fill:var(--accent)
+}
+
+@media screen and (max-width:900px){
+    #navigator{
+        display: flex;
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        border: 1px solid white;
+        justify-content: center;
+        align-items: center;
+        bottom: 0;
+        right: 0;
+        margin: 10px;
+        z-index: 5;
+
+    }
+    #navCont{
+        transform: rotate(-90deg);
+        font-weight: 700;
+        transition: 1s;
+    }
+    #interface{
+        grid-template-columns: 100%;
+        grid-template-rows: 100% 100%;
+    }
+    #screen{
+        background-color: var(--bg);
+        transition: 1s;
+    }
+}
+#compatibility{
+    display: grid;
+    grid-template-columns: 3fr 4fr 4fr;
+}
